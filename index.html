@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QapikQapik</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>QapikQapik</h1>
+  <button id="toggle-theme" style="position: absolute; top: 15px; right: 15px;">🌙 Dark Mode</button>
+
+  <div id="favorites-alert" style="display: none; color: red; font-weight: 500; text-align: center; margin-top: 10px;">
+  </div>
+
+  <div id="filter-bar" style="margin: 20px auto; max-width: 700px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+    <input type="text" id="search-input" placeholder="Search description..." />
+    <select id="filter-category">
+      <option value="">All Categories</option>
+      <option value="Salary">Salary</option>
+      <option value="Groceries">Groceries</option>
+      <option value="Transport">Transport</option>
+      <option value="Entertainment">Entertainment</option>
+      <option value="Other">Other</option>
+    </select>
+    <button id="apply-filters">Apply Filters</button>
+    <button id="toggle-favorites">Show Favorites Only</button>
+  </div>
+
+  <form id="transaction-form">
+    <input type="text" id="description" placeholder="Description" required>
+    <input type="number" id="amount" placeholder="Amount" required>
+    <select id="category" required>
+      <option value="" disabled selected>Select Category</option>
+      <option value="Salary">Salary</option>
+      <option value="Groceries">Groceries</option>
+      <option value="Transport">Transport</option>
+      <option value="Entertainment">Entertainment</option>
+      <option value="Other">Other</option>
+    </select>
+    <input type="date" id="date" required>
+    <select id="type">
+      <option value="income">Income</option>
+      <option value="expense">Expense</option>
+    </select>
+    <button type="submit">Add Transaction</button>
+  </form>
+
+  <h2>Total Balance: <span id="balance">0 ₼</span></h2>
+
+  <div style="margin: 20px;">
+    <button id="export-json">Export JSON</button>
+    <button id="export-csv">Export CSV</button>
+  </div>
+
+  <ul id="transaction-list"></ul>
+
+  <p id="no-favorites-message" style="display: none; text-align: center; color: #888; margin-top: 10px;">
+    You don't have any favorite transactions yet.
+  </p>
+
+  <div id="pagination-controls" style="margin-top: 20px; display: flex; justify-content: center; gap: 10px;">
+    <button id="prev-page">Previous</button>
+    <span id="page-indicator">Page 1</span>
+    <button id="next-page">Next</button>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
