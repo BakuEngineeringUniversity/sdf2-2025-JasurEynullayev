@@ -1,0 +1,16 @@
+{
+  "name": "qapikqapik",
+  "version": "1.0.0",
+  "description": "Şəxsi büdcə və xərc izləmə tətbiqi",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Jasur Eynullayev",
+  "license": "MIT",
+  "dependencies": {
+    "chart.js": "^4.4.9",
+    "electron": "^25.0.0",
+    "electron-store": "^8.1.0"
+  }
+}
